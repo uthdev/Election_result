@@ -1,0 +1,19 @@
+{
+  "name": "election_result",
+  "version": "1.0.0",
+  "description": "A app for users to view election result",
+  "main": "index.js",
+  "scripts": {
+    "test": "Mocha"
+  },
+  "keywords": [
+    "Inec",
+    "Election",
+    "Result"
+  ],
+  "author": "uthdev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
