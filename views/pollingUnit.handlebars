@@ -1,0 +1,24 @@
+<div class="jumbotron mt-3" >
+  <h3>State: {{pollingUnit.[0].state_name}}</h3>
+  <h4>Local Government Area: {{pollingUnit.[0].lga_name}}</h4>
+  <h5>Ward: {{pollingUnit.[0].ward_name}}</h5>
+  <h6 class="text-capitalize"><strong>Polling Unit: {{pollingUnit.[0].polling_unit_name}}</strong></h6>
+</div>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      {{!-- <th scope="col">#</th> --}}
+      <th>Party</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each pollingUnit}}
+    <tr>
+      <td>{{this.party_abbreviation}}</td>
+      <td>{{this.party_score}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<form class="form" action="/lga/wards" method="GET">
+  <div class="form-group">
+    <select class="custom-select w-25 mt-3">
+      <option disabled selected>Select Local Government</option>
+      {{#each lga}}
+      <option value="{{this.lga_id}}">{{this.lga_name}}</option>
+      {{/each}}
+    </select>
+  </div>
+</form>
+
+<form class="form" action="/lga/" method="GET">
+  <div class="form-group">
+    <select class="custom-select w-25 mt-3">
+      <option disabled selected>Select Ward</option>
+      {{#each wards}}
+      <option value="{{this.uniqueid}}">{{this.ward_name}}</option>
+      {{/each}}
+    </select>
+  </div>
+</form>

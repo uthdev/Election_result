@@ -4,7 +4,12 @@
   "description": "A app for users to view election result",
   "main": "index.js",
   "scripts": {
-    "test": "Mocha"
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./server/src -s",
+    "build": "npm run clean && npm run build-babel",
+    "prestart": "npm run build",
+    "start": "node ./build/index.js",
+    "dev": "nodemon --exec babel-node ./server/src/index.js"
   },
   "keywords": [
     "Inec",
@@ -14,6 +19,14 @@
   "author": "uthdev",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^1.7.0"
   }
 }
